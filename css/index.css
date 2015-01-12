@@ -21,10 +21,8 @@ body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
 
 body {
     font-family: 'Open Sans', sans-serif;
-    color: #fff;
     background: #fff;
     font-size: 0.9em;
-    font-weight: 300;
 }
 
 h1 {
@@ -110,87 +108,106 @@ h1 {
 	font-size: 5em;
 }
 
+/* 2nd and 3rd icons */
+
+.bl-icon {
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(209,177,134,1);
+  -webkit-transition: background 0.2s, color 0.2s;
+  -moz-transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s;
+}
+
 .bl-icon:hover {
-	border:3px dashed;
-	border-radius: 50%;
-	-moz-animation: spin 2s infinite linear;
-	-o-animation: spin 2s infinite linear;
-	-webkit-animation: spin 2s infinite linear;
-	animation: spin 2s infinite linear;
-	display: inline-block;
+  background: rgba(209,177,134,1);
+  color: #404040;
 }
-@-moz-keyframes spin {
-  0% {
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
 
-  100% {
-    -moz-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
+.bl-icon:hover:before {
+  -webkit-animation: spinAround 2s linear infinite;
+  -moz-animation: spinAround 2s linear infinite;
+  animation: spinAround 2s linear infinite;
 }
-@-webkit-keyframes spin {
-  0% {
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
 
-  100% {
-    -moz-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
+.bl-icon:hover:after {
+  -webkit-animation: spinAround 9s linear infinite;
+  -moz-animation: spinAround 9s linear infinite;
+  animation: spinAround 9s linear infinite;
+}
+
+@-webkit-keyframes spinAround {
+  from {
+    -webkit-transform: rotate(0deg)
+  }
+  to {
+    -webkit-transform: rotate(360deg);
   }
 }
-@-o-keyframes spin {
-  0% {
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+@-moz-keyframes spinAround {
+  from {
+    -moz-transform: rotate(0deg)
   }
-
-  100% {
-    -moz-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
+  to {
+    -moz-transform: rotate(360deg);
   }
 }
-@-ms-keyframes spin {
-  0% {
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg)
   }
-
-  100% {
-    -moz-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
+  to {
+    transform: rotate(360deg);
   }
 }
-@keyframes spin {
-  0% {
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
 
-  100% {
-    -moz-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
+/* 1st and last icons */
+
+.bl-icon-dark {
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(64,64,64,1);
+  -webkit-transition: background 0.2s, color 0.2s;
+  -moz-transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s;
+}
+
+.bl-icon-dark:hover {
+  background: rgba(64,64,64,1);
+  color: #d1b186;
+}
+
+.bl-icon-dark:hover:before {
+  -webkit-animation: spinAround 2s linear infinite;
+  -moz-animation: spinAround 2s linear infinite;
+  animation: spinAround 2s linear infinite;
+}
+
+.bl-icon-dark:hover:after {
+  -webkit-animation: spinAround 9s linear infinite;
+  -moz-animation: spinAround 9s linear infinite;
+  animation: spinAround 9s linear infinite;
+}
+
+@-webkit-keyframes spinAround {
+  from {
+    -webkit-transform: rotate(0deg)
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spinAround {
+  from {
+    -moz-transform: rotate(0deg)
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
